@@ -35,7 +35,7 @@ class Triangle
     # if @length1.positive?() && @length2.positive?() && @length3.positive?() && @length1+@length2>@length3 && @length2+@length3>@length1 && @length1+@length3>@length2 
        
     if @length1==@length2 || @length1==@length3 || @length2==@length3
-    return :isosceles
+      return :isosceles
     
     elsif @length1==@length2 && @@length2==@length3
       return :equilateral

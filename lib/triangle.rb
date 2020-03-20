@@ -25,7 +25,7 @@ class Triangle
   
   def validator
     if @x==0 && @y==0 && @z==0
-      raise TraingleError
+      TraingleError
     end 
   end 
   

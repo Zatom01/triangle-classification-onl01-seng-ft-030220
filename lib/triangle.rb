@@ -43,22 +43,22 @@ class Triangle
       end
    
     else 
-      raise TraingleError
-      # begin
+      # raise TraingleError
+      begin
       
-      #   raise TraingleError
-      # rescue TraingleError => error
-      #     puts error.message
+        raise TraingleError
+      rescue TraingleError => error
+          puts error.message
      
-      # end
+      end
     end 
   
   end 
  
-  class TriangleError < ::StandardError
-    # def message
-    #   "you must enter valid length of each traingle"
-    # end
+  class TriangleError < StandardError
+    def message
+      "you must enter valid length of each traingle"
+    end
     
     
   end

@@ -56,10 +56,7 @@ class Triangle
   end 
  
   class TriangleError < StandardError
-    def message
-      "You must give valid length for each side of the trainlge"
-      
-    end
+    
   end 
 end
     

@@ -30,6 +30,8 @@ class Triangle
   end 
   
   def kind 
+    validator(@all)
+    
     if @x.positive?() && @y.positive?() && @z.positive?() && @x+@y>@z && @y+@z>@x && @x+@z>@y 
        
       if all_equal?(@all)
@@ -41,18 +43,13 @@ class Triangle
       else 
         return :scalene
       end
-    else 
-      validator(@all)
-      
+    end 
   end 
  
   class TriangleError < StandardError
-    def message
-      "you must enter valid length of each traingle"
-    end
-    
-    
+    # def message
+    #   "you must enter valid length of each traingle"
+    # end
   end
-
 
 end

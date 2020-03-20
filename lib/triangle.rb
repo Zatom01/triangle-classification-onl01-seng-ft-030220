@@ -1,4 +1,4 @@
-require 'pry'
+
 class Triangle
   
   attr_accessor :length1, :length2, :length3
@@ -30,7 +30,7 @@ class Triangle
   
   def kind 
     
-    if @x.positive?() && @y.positive?() && @z.positive?() && (@x+@y)>@z && (@y+@z)>@x && (@x+@z)>@y 
+    if @x.positive?() && @y.positive?() && @z.positive?() && @x+@y>@z && @y+@z>@x && @x+@z>@y 
        
       if all_equal?(@all)
       return :equilateral

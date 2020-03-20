@@ -3,28 +3,28 @@ class Triangle
   attr_accessor :length1, :length2, :length3
   
   def initialize(length1,length2,length3)
-    @all=[]
+    # @all=[]
     @length1=length1
     @length2=length2
     @length3=length3
-    @all << @length1
-    @all << @length2
-    @all << @length3
-    @x=@all[0]
-    @y=@all[1]
-    @z=@all[2]
+    # @all << @length1
+    # @all << @length2
+    # @all << @length3
+    # @x=@all[0]
+    # @y=@all[1]
+    # @z=@all[2]
   end 
   
-  def all_equal?(arr)
-    arr.uniq.size <=1 
-  end 
+  # def all_equal?(arr)
+  #   arr.uniq.size <=1 
+  # end 
   
-  def two_equal?(arr)
-    @length1==@length2 || @length1==@length3 || @length2==@length3
-  end 
+  # def two_equal?(arr)
+  #   @length1==@length2 || @length1==@length3 || @length2==@length3
+  # end 
   
   def validator
-    if @x==0 && @y==0 && @z==0
+    if @length1==0 && @length2==0 && @length3==0
       TraingleError
     end 
   end 
@@ -32,7 +32,7 @@ class Triangle
   def kind 
     validator
     
-    if @x.positive?() && @y.positive?() && @z.positive?() && @x+@y>@z && @y+@z>@x && @x+@z>@y 
+    if @length1.positive?() && @length2.positive?() && @length3.positive?() && @length1+@length2>@length3 && @length2+@length3>@length1 && @length1+@length3>@length2 
        
       if all_equal?(@all)
       return :equilateral

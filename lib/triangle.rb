@@ -24,7 +24,7 @@ class Triangle
   # end 
   
   def validator
-    if (@length1==0 && @length2==0 && @length3==0) || (!@length1.positive?() && !@length2.positive?() && !@length3.positive?() ) || (@length1+@length2 <@length3)
+    if (@length1==0 && @length2==0 && @length3==0) || (!@length1.positive?() && !@length2.positive?() && !@length3.positive?() ) || (@length1+@length2 <@length3 || @length2+@length3 <@length1 || @length1+@length3 <@length2)
       raise TraingleError
     end 
   end 

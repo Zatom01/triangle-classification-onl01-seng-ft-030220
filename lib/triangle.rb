@@ -35,13 +35,13 @@ class Triangle
     # if @length1.positive?() && @length2.positive?() && @length3.positive?() && @length1+@length2>@length3 && @length2+@length3>@length1 && @length1+@length3>@length2 
        
     if @length1==@length2 || @length2==@length3 || @length1==@length3
-      return :isosceles
+      :isosceles
     
     elsif @length1==@length2 && @@length2==@length3
-      return :equilateral
+      :equilateral
   
     else 
-      return :scalene
+      :scalene
     end
   
   end 

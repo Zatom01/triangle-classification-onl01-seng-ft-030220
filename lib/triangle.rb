@@ -15,8 +15,8 @@ class Triangle
     # @z=@all[2]
   end 
   
-  def all_equal?(arr)
-    arr.uniq.size <=1 
+  def all_equal?
+    @all.uniq.size <=1 
   end 
   
   # def two_equal?(arr)
@@ -33,12 +33,11 @@ class Triangle
     # validator
     
     # if @length1.positive?() && @length2.positive?() && @length3.positive?() && @length1+@length2>@length3 && @length2+@length3>@length1 && @length1+@length3>@length2 
-       
-    if @length1==@length2 || @length2==@length3 || @length3==@length1
-      :isosceles
+    if all_equal?
+      return :equilateral
     
-    elsif @length1==@length2 && @@length2==@length3
-      :equilateral
+    elsif @length1==@length2 || @length2==@length3 || @length3==@length1
+      return :isosceles
   
     else 
       :scalene

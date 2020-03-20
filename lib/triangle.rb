@@ -43,7 +43,7 @@ class Triangle
       end
    
     else 
-      raise TraingleError
+      # raise TraingleError
       begin
       
         raise TraingleError

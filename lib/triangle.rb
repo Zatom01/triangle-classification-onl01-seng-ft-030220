@@ -56,9 +56,9 @@ class Triangle
   end 
  
   class TriangleError < StandardError
-    def message
-      "you must enter valid length of each traingle"
-    end
+    # def message
+    #   "you must enter valid length of each traingle"
+    # end
     
     
   end

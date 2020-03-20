@@ -43,14 +43,14 @@ class Triangle
       end
    
     else 
-      # raise TraingleError
-      begin
+      raise TraingleError
+      # begin
       
-        raise TraingleError
-      rescue TraingleError => error
-          puts error.message
+      #   raise TraingleError
+      # rescue TraingleError => error
+      #     puts error.message
      
-      end
+      # end
     end 
   
   end 

@@ -26,10 +26,13 @@ class Triangle
     @length1==@length2 || @length1==@length3 || @length2==@length3
   end 
   
-  
+  def validator(@all)
+    if @x==0 && @y==0 || @x==0 && @z==0 || @y==0 && @z==0 
+      raise TraingleError
+    end 
+  end 
   
   def kind 
-    
     if @x.positive?() && @y.positive?() && @z.positive?() && @x+@y>@z && @y+@z>@x && @x+@z>@y 
        
       if all_equal?(@all)
@@ -41,18 +44,9 @@ class Triangle
       else 
         return :scalene
       end
-   
     else 
-      # raise TraingleError
-      # begin
+      validator(@all)
       
-      #   raise TraingleError
-      # rescue TraingleError => error
-      #     puts error.message
-     
-      # end
-    end 
-  
   end 
  
   class TriangleError < StandardError

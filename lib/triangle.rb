@@ -19,23 +19,27 @@ class Triangle
   def validator
     if (@length1==0 && @length2==0 && @length3==0) || (@length1.negative?() || @length2.negative?() || @length3.negative?() ) || (@length1+@length2 <@length3 || @length2+@length3 <@length1 || @length1+@length3 <@length2)
       
-      raise TraingleError
+      return true
     end 
   end 
   
   def kind 
     
-    validator
+    if validator==true 
+      raise TriangleError
     
-    if all_equal?
-      return :equilateral
+    else
     
-    elsif @length1==@length2 || @length2==@length3 || @length3==@length1
-      return :isosceles
-  
-    else 
-      :scalene
-    end
+      if all_equal?
+        return :equilateral
+      
+      elsif @length1==@length2 || @length2==@length3 || @length3==@length1
+        return :isosceles
+    
+      else 
+        :scalene
+      end
+    end 
   
   end 
  

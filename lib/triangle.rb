@@ -30,7 +30,7 @@ class Triangle
   end 
   
   def kind 
-    validator
+    # validator
     
     # if @length1.positive?() && @length2.positive?() && @length3.positive?() && @length1+@length2>@length3 && @length2+@length3>@length1 && @length1+@length3>@length2 
        

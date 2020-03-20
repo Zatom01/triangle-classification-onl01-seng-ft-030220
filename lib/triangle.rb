@@ -25,25 +25,25 @@ class Triangle
   
   def validator
     if @length1==0 && @length2==0 && @length3==0
-      TraingleError
+      raise TraingleError
     end 
   end 
   
   def kind 
     validator
     
-    if @length1.positive?() && @length2.positive?() && @length3.positive?() && @length1+@length2>@length3 && @length2+@length3>@length1 && @length1+@length3>@length2 
+    # if @length1.positive?() && @length2.positive?() && @length3.positive?() && @length1+@length2>@length3 && @length2+@length3>@length1 && @length1+@length3>@length2 
        
-      if @length1==@length2 || @length1==@length3 || @length2==@length3
-      return :isosceles
-      
-      elsif two_equal?(@all)
-      return :isosceles
+    if @length1==@length2 || @length1==@length3 || @length2==@length3
+    return :isosceles
     
-      else 
-        return :scalene
-      end
-    end 
+    elsif @length1==@length2 && @@length2==@length3
+      return :equilateral
+  
+    else 
+      return :scalene
+    end
+  
   end 
  
   class TriangleError < StandardError

@@ -43,7 +43,7 @@ class Triangle
       end
    
     else 
-      raise Traingle
+      raise TraingleError
       # begin
       
       #   raise TraingleError
@@ -55,7 +55,7 @@ class Triangle
   
   end 
  
-  class Triangle < TriangleError
+  class TriangleError < StandardError
     
   end
 end 

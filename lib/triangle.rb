@@ -3,21 +3,21 @@ class Triangle
   attr_accessor :length1, :length2, :length3
   
   def initialize(length1,length2,length3)
-    # @all=[]
+    @all=[]
     @length1=length1
     @length2=length2
     @length3=length3
-    # @all << @length1
-    # @all << @length2
-    # @all << @length3
+    @all << @length1
+    @all << @length2
+    @all << @length3
     # @x=@all[0]
     # @y=@all[1]
     # @z=@all[2]
   end 
   
-  # def all_equal?(arr)
-  #   arr.uniq.size <=1 
-  # end 
+  def all_equal?(arr)
+    arr.uniq.size <=1 
+  end 
   
   # def two_equal?(arr)
   #   @length1==@length2 || @length1==@length3 || @length2==@length3
